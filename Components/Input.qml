@@ -453,7 +453,7 @@ Column {
 
             contentItem: Text {
                 text: parent.text
-                color: "#444"
+                color: config.Foreground
                 font.pointSize: root.font.pointSize
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
@@ -462,8 +462,8 @@ Column {
 
             background: Rectangle {
                 id: buttonBackground
-                color: "white"
-                opacity: 0.2
+                color: config.CurrentLine
+                opacity: 0.5
                 radius: config.RoundCorners || 0
             }
 
@@ -478,7 +478,7 @@ Column {
                     }
                     PropertyChanges {
                         target: loginButton.contentItem
-                        color: "#444"
+                        color: config.Foreground
                     }
                 },
                 State {
@@ -492,7 +492,7 @@ Column {
                     PropertyChanges {
                         target: loginButton.contentItem
                         opacity: 1
-                        color: "#444"
+                        color: color.Foreground
                     }
                 },
                 State {
